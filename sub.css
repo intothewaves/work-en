@@ -157,10 +157,29 @@ header .gnb-menu{
 header .gnb-menu .depth01 li{
 	margin-bottom: 8px;
 }
+
 header .gnb-menu .depth01 li a{
 	font-size: 1.0417vw;
 	line-height: 1.2;
+	width: max-content;
+	position: relative;
+	padding-bottom: 2px;
 }
+header .gnb-menu .depth01 li a::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: white;
+	transition: .5s;
+}
+header .gnb-menu .depth01 li a:hover::after{
+	width: 100%;
+	transition: .5s;
+}
+
 header .depth01{
 	transition: 1s .3s;
 	opacity: 0;
